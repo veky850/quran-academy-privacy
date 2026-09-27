@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy & Terms of Service - Quran Academy</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.7;
+            color: #2c3e50;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 30px 20px;
+            background-color: #f8f9fa;
+        }
+        .container {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            border: 1px solid #e9ecef;
+        }
+        h1 {
+            color: #1b4d3e;
+            border-bottom: 3px solid #d4af37;
+            padding-bottom: 12px;
+            font-size: 28px;
+            margin-top: 0;
+        }
+        h2 {
+            color: #2c5e4f;
+            margin-top: 32px;
+            font-size: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 8px;
+        }
+        p, li {
+            font-size: 15px;
+            color: #4a5568;
+        }
+        ul {
+            padding-left: 24px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .badge {
+            display: inline-block;
+            background-color: #1b4d3e;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .highlight-box {
+            background-color: #f0fdf4;
+            border-left: 4px solid #16a34a;
+            padding: 16px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .contact-box {
+            background-color: #faf5ff;
+            border: 1px solid #e9d5ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 13px;
+            color: #718096;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span class="badge">Official Compliance Document • 2026 Edition</span>
+        <h1>Privacy Policy & Terms of Service</h1>
+        <p><strong>Effective Date:</strong> September 26, 2026<br>
+        <strong>Application Name:</strong> Quran Academy (نُورُ الْقُرْآنِ)<br>
+        <strong>Developer Contact:</strong> Muhammad Waqas (muhammadwaqas880850@gmail.com)</p>
+
+        <div class="highlight-box">
+            <strong>Human-Centric Privacy Commitment:</strong> Quran Academy is built with a strict "Privacy by Design" philosophy. We respect the spiritual purpose of this application. We do not harvest, monetize, or sell your personal information. This policy details our compliance with Google Play Developer Program Policies, GDPR, and CCPA.
+        </div>
+
+        <h2>1. Data Collection & Processing Purposes</h2>
+        <p>We process minimal user data required exclusively to provide Islamic religious services:</p>
+        <ul>
+            <li><strong>Precise & Approximate Location (GPS/Network):</strong> Used locally on your device to calculate astronomical prayer times (Fajr, Dhuhr, Asr, Maghrib, Isha) based on your exact horizon and to determine Qibla direction. Your location coordinate data is processed in transient memory and is <em>never</em> stored on or transmitted to external servers.</li>
+            <li><strong>Audio Data & Speech Recognition:</strong> When using the voice search feature, audio input is captured temporarily by the Android system SpeechRecognizer service to transcribe search queries for Quranic verses. Audio files are discarded immediately after transcription and are not recorded or saved.</li>
+            <li><strong>Account Data (Optional):</strong> If you choose to sign in via Google Authentication, we collect your name and email address solely to sync your reading bookmarks and progress across your devices via Google Firebase. You can use the app fully offline without an account.</li>
+            <li><strong>App Activity & Preferences:</strong> Reading progress, Tasbeeh counter counts, and selected Reciter settings are stored locally on your device using Android Room Database and Datastore.</li>
+        </ul>
+
+        <h2>2. Foreground Services & Device Hardware Usage</h2>
+        <p>To deliver continuous utility without disruption, our application uses specific Android system capabilities:</p>
+        <ul>
+            <li><strong>FOREGROUND_SERVICE_MEDIA_PLAYBACK:</strong> Required to support background Quran audio playback. This allows you to listen to Ayah recitations seamlessly while using other applications or when the device screen is locked.</li>
+            <li><strong>POST_NOTIFICATIONS:</strong> Used to deliver timely Azaan (call to prayer) alerts and daily Quranic reminders according to your custom preferences.</li>
+        </ul>
+
+        <h2>3. Third-Party Services & Infrastructure</h2>
+        <p>We integrate with industry-standard, secure third-party SDKs that process data under strict confidentiality obligations:</p>
+        <ul>
+            <li><strong>Google Firebase (Authentication, Firestore):</strong> Used for secure user authentication and cloud data synchronization.</li>
+            <li><strong>Google Mobile Ads (AdMob):</strong> Displays non-intrusive advertisements to cover server bandwidth costs. AdMob may process your device Advertising ID (AAID) to deliver appropriate, family-friendly ads. You can reset or opt out of ad personalization anytime in Android System Settings &gt; Google &gt; Ads.</li>
+            <li><strong>Google Gemini API:</strong> Powers our AI Islamic Q&A feature. Prompts sent to Gemini are anonymized and not connected to your user account or personal email.</li>
+            <li><strong>EveryAyah CDN:</strong> Streams authentic Quran audio recitations directly from verified Islamic audio servers.</li>
+        </ul>
+
+        <h2>4. User Rights, Account & Data Deletion</h2>
+        <p>We provide full control over your personal data in accordance with Google Play's User Data policy:</p>
+        <ul>
+            <li><strong>In-App Account Deletion:</strong> You can permanently delete your account and all associated cloud data at any time by navigating to <strong>Settings &gt; Account & Data Deletion</strong> inside the app.</li>
+            <li><strong>Permanent Purge:</strong> Deleting your account immediately wipes your user record from Firebase Authentication and permanently purges all your synchronized bookmarks and profile records from Google Cloud Firestore.</li>
+        </ul>
+
+        <h2>5. Children's Privacy (COPPA Compliance)</h2>
+        <p>Quran Academy is suitable for family members of all ages. We comply with the Children’s Online Privacy Protection Act (COPPA). We do not knowingly collect personal information from children under 13. All content is thoroughly vetted for family-friendly environments.</p>
+
+        <h2>6. Terms of Service & License</h2>
+        <ul>
+            <li><strong>Usage License:</strong> We grant you a personal, non-exclusive, non-transferable license to use Quran Academy for personal Islamic study and religious practice.</li>
+            <li><strong>Content Integrity:</strong> All Arabic Quranic text is compiled from verified Tanzil sources. You may not reverse engineer, scrape, or redistribute the application binaries or proprietary AI prompts.</li>
+            <li><strong>Disclaimer:</strong> Prayer times and Qibla calculations rely on high-precision astronomical mathematical algorithms. Minor variances may occur due to local magnetic interference or regional calculation conventions. We recommend cross-referencing with your local Masjid schedule.</li>
+        </ul>
+
+        <div class="contact-box">
+            <h2>7. Contact & Data Protection Officer</h2>
+            <p>If you have questions, concerns, or privacy requests regarding your data, contact us directly:</p>
+            <p><strong>Lead Developer:</strong> Muhammad Waqas<br>
+            <strong>Email:</strong> <a href="mailto:muhammadwaqas880850@gmail.com">muhammadwaqas880850@gmail.com</a><br>
+            <strong>Response Time:</strong> We aim to respond to all privacy inquiries within 48 business hours.</p>
+        </div>
+
+        <footer>
+            &copy; 2026 Quran Academy (نُورُ الْقُرْآنِ). All rights reserved.
+        </footer>
+    </div>
+</body>
+</html>
