@@ -3,145 +3,874 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy & Terms of Service - Quran Academy</title>
+    <title>Privacy Policy & Legal Terms — Quran Academy (نُورُ الْقُرْآنِ)</title>
+    <meta name="description" content="Official Enterprise Privacy Policy, Data Safety Governance, and Terms of Service for Quran Academy. Fully compliant with Google Play Policies (2026), GDPR, CCPA, and COPPA.">
+    <meta name="theme-color" content="#0a261d">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Amiri:wght@700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary: #0a261d;
+            --primary-light: #123d2f;
+            --accent-gold: #d4af37;
+            --accent-mint: #10b981;
+            --accent-mint-bg: #ecfdf5;
+            --text-heading: #0f172a;
+            --text-body: #334155;
+            --text-muted: #64748b;
+            --bg-page: #f8fafc;
+            --bg-card: #ffffff;
+            --border-light: #e2e8f0;
+            --border-subtle: #f1f5f9;
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 8px 24px -4px rgba(10, 38, 29, 0.08);
+            --shadow-lg: 0 16px 32px -8px rgba(10, 38, 29, 0.12);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.7;
-            color: #2c3e50;
-            max-width: 900px;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-body);
+            line-height: 1.8;
+            font-size: 15.5px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Top Institutional Header */
+        header.site-header {
+            background: linear-gradient(135deg, #061b14 0%, #0a261d 50%, #123d2f 100%);
+            color: #ffffff;
+            padding: 60px 20px 70px;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 4px solid var(--accent-gold);
+        }
+
+        header.site-header::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(circle at 80% 20%, rgba(212, 175, 55, 0.12) 0%, transparent 50%),
+                        radial-gradient(circle at 20% 80%, rgba(16, 185, 129, 0.15) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .header-container {
+            max-width: 1040px;
             margin: 0 auto;
-            padding: 30px 20px;
-            background-color: #f8f9fa;
+            position: relative;
+            z-index: 2;
         }
-        .container {
-            background: #ffffff;
+
+        .header-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            color: #f1f5f9;
+            padding: 6px 14px;
+            border-radius: 999px;
+            font-size: 12.5px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            margin-bottom: 22px;
+        }
+
+        .header-badge span.pulse-dot {
+            width: 8px;
+            height: 8px;
+            background-color: var(--accent-mint);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--accent-mint);
+        }
+
+        h1.app-title {
+            font-size: 38px;
+            font-weight: 800;
+            line-height: 1.25;
+            color: #ffffff;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
+
+        .arabic-sub {
+            font-family: 'Amiri', serif;
+            font-size: 32px;
+            color: var(--accent-gold);
+            margin-right: 12px;
+            direction: rtl;
+        }
+
+        p.header-subtitle {
+            font-size: 17px;
+            color: #cbd5e1;
+            max-width: 780px;
+            margin-bottom: 28px;
+            font-weight: 400;
+        }
+
+        .meta-strip {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            font-size: 13.5px;
+            color: #94a3b8;
+        }
+
+        .meta-item strong {
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        /* Sticky Navigation Bar */
+        nav.sticky-nav {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-light);
+            z-index: 1000;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .nav-container {
+            max-width: 1040px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            overflow-x: auto;
+            white-space: nowrap;
+            padding: 0 16px;
+            scrollbar-width: none;
+        }
+
+        .nav-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        .nav-link {
+            padding: 16px 18px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border-bottom: 3px solid transparent;
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
+            background: rgba(10, 38, 29, 0.03);
+        }
+
+        .nav-link.active {
+            color: var(--primary);
+            border-bottom-color: var(--accent-mint);
+        }
+
+        /* Main Content Layout */
+        main.main-content {
+            max-width: 1040px;
+            margin: 40px auto 80px;
+            padding: 0 20px;
+        }
+
+        .content-card {
+            background: var(--bg-card);
+            border-radius: 16px;
+            border: 1px solid var(--border-light);
             padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-            border: 1px solid #e9ecef;
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 36px;
         }
-        h1 {
-            color: #1b4d3e;
-            border-bottom: 3px solid #d4af37;
-            padding-bottom: 12px;
-            font-size: 28px;
-            margin-top: 0;
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 2px solid var(--border-subtle);
         }
-        h2 {
-            color: #2c5e4f;
-            margin-top: 32px;
-            font-size: 20px;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 8px;
+
+        .section-number {
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            background: var(--primary);
+            color: var(--accent-gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 16px;
+            flex-shrink: 0;
         }
-        p, li {
-            font-size: 15px;
-            color: #4a5568;
+
+        h2.section-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--primary);
+            letter-spacing: -0.3px;
         }
-        ul {
+
+        h3.subsection-title {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--text-heading);
+            margin: 24px 0 10px;
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: var(--text-body);
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        ul, ol {
+            margin-bottom: 20px;
             padding-left: 24px;
         }
+
         li {
+            margin-bottom: 10px;
+            color: var(--text-body);
+        }
+
+        /* Callout Banners */
+        .callout {
+            border-radius: 12px;
+            padding: 20px 24px;
+            margin: 24px 0;
+            display: flex;
+            gap: 16px;
+        }
+
+        .callout-icon {
+            font-size: 24px;
+            flex-shrink: 0;
+            line-height: 1.3;
+        }
+
+        .callout.green {
+            background-color: var(--accent-mint-bg);
+            border-left: 5px solid var(--accent-mint);
+            color: #064e3b;
+        }
+
+        .callout.gold {
+            background-color: #fffbeb;
+            border-left: 5px solid #d97706;
+            color: #78350f;
+        }
+
+        .callout.blue {
+            background-color: #f0f9ff;
+            border-left: 5px solid #0284c7;
+            color: #0c4a6e;
+        }
+
+        /* Data Safety Matrix Table */
+        .table-responsive {
+            overflow-x: auto;
+            margin: 24px 0;
+            border-radius: 12px;
+            border: 1px solid var(--border-light);
+        }
+
+        table.data-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+            text-align: left;
+            background: #ffffff;
+        }
+
+        table.data-table th {
+            background-color: #f8fafc;
+            color: var(--primary);
+            font-weight: 700;
+            padding: 14px 18px;
+            border-bottom: 1px solid var(--border-light);
+            text-transform: uppercase;
+            font-size: 11.5px;
+            letter-spacing: 0.5px;
+        }
+
+        table.data-table td {
+            padding: 16px 18px;
+            border-bottom: 1px solid var(--border-light);
+            vertical-align: top;
+        }
+
+        table.data-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        table.data-table tr:hover {
+            background-color: #fbfcfe;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
+        .tag.tag-local {
+            background-color: #dcfce7;
+            color: #15803d;
+        }
+
+        .tag.tag-ephemeral {
+            background-color: #e0f2fe;
+            color: #0369a1;
+        }
+
+        .tag.tag-encrypted {
+            background-color: #fef3c7;
+            color: #b45309;
+        }
+
+        .tag.tag-no-share {
+            background-color: #ede9fe;
+            color: #6d28d9;
+        }
+
+        /* Step-by-Step Deletion Flow */
+        .deletion-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            margin: 28px 0;
+        }
+
+        .step-card {
+            background: #ffffff;
+            border: 1px solid var(--border-light);
+            border-radius: 12px;
+            padding: 22px;
+            box-shadow: var(--shadow-sm);
+            position: relative;
+        }
+
+        .step-badge {
+            background: var(--primary);
+            color: #ffffff;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 13px;
+            margin-bottom: 12px;
+        }
+
+        .step-card h4 {
+            font-size: 15.5px;
+            font-weight: 700;
+            color: var(--primary);
             margin-bottom: 8px;
         }
-        .badge {
-            display: inline-block;
-            background-color: #1b4d3e;
-            color: white;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: bold;
-            margin-bottom: 20px;
+
+        .step-card p {
+            font-size: 13.5px;
+            color: var(--text-muted);
+            line-height: 1.6;
         }
-        .highlight-box {
-            background-color: #f0fdf4;
-            border-left: 4px solid #16a34a;
-            padding: 16px;
-            margin: 20px 0;
-            border-radius: 4px;
+
+        /* Contact & Officer Card */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 24px;
         }
+
         .contact-box {
-            background-color: #faf5ff;
-            border: 1px solid #e9d5ff;
-            padding: 20px;
-            border-radius: 8px;
-            margin-top: 30px;
+            background: #f8fafc;
+            border: 1px solid var(--border-light);
+            border-radius: 12px;
+            padding: 24px;
         }
-        footer {
-            margin-top: 40px;
+
+        .contact-box h4 {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .contact-box a {
+            color: var(--primary-light);
+            font-weight: 600;
+            text-decoration: none;
+            word-break: break-all;
+        }
+
+        .contact-box a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer.site-footer {
+            background: #04120e;
+            color: #94a3b8;
+            padding: 50px 20px 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 14px;
+        }
+
+        .footer-container {
+            max-width: 1040px;
+            margin: 0 auto;
             text-align: center;
-            font-size: 13px;
-            color: #718096;
+        }
+
+        .footer-logo {
+            font-size: 22px;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+
+        .footer-copy {
+            margin-bottom: 16px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-size: 13.5px;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-gold);
+        }
+
+        @media (max-width: 768px) {
+            h1.app-title { font-size: 28px; }
+            .content-card { padding: 24px 20px; }
+            header.site-header { padding: 40px 16px 50px; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <span class="badge">Official Compliance Document • 2026 Edition</span>
-        <h1>Privacy Policy & Terms of Service</h1>
-        <p><strong>Effective Date:</strong> September 26, 2026<br>
-        <strong>Application Name:</strong> Quran Academy (نُورُ الْقُرْآنِ)<br>
-        <strong>Developer Contact:</strong> Muhammad Waqas (muhammadwaqas880850@gmail.com)</p>
 
-        <div class="highlight-box">
-            <strong>Human-Centric Privacy Commitment:</strong> Quran Academy is built with a strict "Privacy by Design" philosophy. We respect the spiritual purpose of this application. We do not harvest, monetize, or sell your personal information. This policy details our compliance with Google Play Developer Program Policies, GDPR, and CCPA.
+    <!-- Institutional Header -->
+    <header class="site-header">
+        <div class="header-container">
+            <div class="header-badge">
+                <span class="pulse-dot"></span>
+                OFFICIAL GOVERNANCE & DATA PROTECTION SPECIFICATION • 2026 EDITION
+            </div>
+            <h1 class="app-title">
+                <span class="arabic-sub">نُورُ الْقُرْآنِ</span>
+                Quran Academy
+            </h1>
+            <p class="header-subtitle">
+                Master Privacy Governance, Android System Hardware Disclosure, and Terms of Service. Designed with a strict "Privacy by Design" architecture to exceed Google Play Developer Program Policies, GDPR, and CCPA standards.
+            </p>
+            <div class="meta-strip">
+                <div class="meta-item">Application: <strong>Quran Academy (نُورُ الْقُرْآنِ)</strong></div>
+                <div class="meta-item">Effective Date: <strong>October 2, 2026</strong></div>
+                <div class="meta-item">Lead Developer: <strong>Muhammad Waqas</strong></div>
+                <div class="meta-item">Compliance Officer Contact: <strong>muhammadwaqas880850@gmail.com</strong></div>
+            </div>
         </div>
+    </header>
 
-        <h2>1. Data Collection & Processing Purposes</h2>
-        <p>We process minimal user data required exclusively to provide Islamic religious services:</p>
-        <ul>
-            <li><strong>Precise & Approximate Location (GPS/Network):</strong> Used locally on your device to calculate astronomical prayer times (Fajr, Dhuhr, Asr, Maghrib, Isha) based on your exact horizon and to determine Qibla direction. Your location coordinate data is processed in transient memory and is <em>never</em> stored on or transmitted to external servers.</li>
-            <li><strong>Audio Data & Speech Recognition:</strong> When using the voice search feature, audio input is captured temporarily by the Android system SpeechRecognizer service to transcribe search queries for Quranic verses. Audio files are discarded immediately after transcription and are not recorded or saved.</li>
-            <li><strong>Account Data (Optional):</strong> If you choose to sign in via Google Authentication, we collect your name and email address solely to sync your reading bookmarks and progress across your devices via Google Firebase. You can use the app fully offline without an account.</li>
-            <li><strong>App Activity & Preferences:</strong> Reading progress, Tasbeeh counter counts, and selected Reciter settings are stored locally on your device using Android Room Database and Datastore.</li>
-        </ul>
-
-        <h2>2. Foreground Services & Device Hardware Usage</h2>
-        <p>To deliver continuous utility without disruption, our application uses specific Android system capabilities:</p>
-        <ul>
-            <li><strong>FOREGROUND_SERVICE_MEDIA_PLAYBACK:</strong> Required to support background Quran audio playback. This allows you to listen to Ayah recitations seamlessly while using other applications or when the device screen is locked.</li>
-            <li><strong>POST_NOTIFICATIONS:</strong> Used to deliver timely Azaan (call to prayer) alerts and daily Quranic reminders according to your custom preferences.</li>
-        </ul>
-
-        <h2>3. Third-Party Services & Infrastructure</h2>
-        <p>We integrate with industry-standard, secure third-party SDKs that process data under strict confidentiality obligations:</p>
-        <ul>
-            <li><strong>Google Firebase (Authentication, Firestore):</strong> Used for secure user authentication and cloud data synchronization.</li>
-            <li><strong>Google Mobile Ads (AdMob):</strong> Displays non-intrusive advertisements to cover server bandwidth costs. AdMob may process your device Advertising ID (AAID) to deliver appropriate, family-friendly ads. You can reset or opt out of ad personalization anytime in Android System Settings &gt; Google &gt; Ads.</li>
-            <li><strong>Google Gemini API:</strong> Powers our AI Islamic Q&A feature. Prompts sent to Gemini are anonymized and not connected to your user account or personal email.</li>
-            <li><strong>EveryAyah CDN:</strong> Streams authentic Quran audio recitations directly from verified Islamic audio servers.</li>
-        </ul>
-
-        <h2>4. User Rights, Account & Data Deletion</h2>
-        <p>We provide full control over your personal data in accordance with Google Play's User Data policy:</p>
-        <ul>
-            <li><strong>In-App Account Deletion:</strong> You can permanently delete your account and all associated cloud data at any time by navigating to <strong>Settings &gt; Account & Data Deletion</strong> inside the app.</li>
-            <li><strong>Permanent Purge:</strong> Deleting your account immediately wipes your user record from Firebase Authentication and permanently purges all your synchronized bookmarks and profile records from Google Cloud Firestore.</li>
-        </ul>
-
-        <h2>5. Children's Privacy (COPPA Compliance)</h2>
-        <p>Quran Academy is suitable for family members of all ages. We comply with the Children’s Online Privacy Protection Act (COPPA). We do not knowingly collect personal information from children under 13. All content is thoroughly vetted for family-friendly environments.</p>
-
-        <h2>6. Terms of Service & License</h2>
-        <ul>
-            <li><strong>Usage License:</strong> We grant you a personal, non-exclusive, non-transferable license to use Quran Academy for personal Islamic study and religious practice.</li>
-            <li><strong>Content Integrity:</strong> All Arabic Quranic text is compiled from verified Tanzil sources. You may not reverse engineer, scrape, or redistribute the application binaries or proprietary AI prompts.</li>
-            <li><strong>Disclaimer:</strong> Prayer times and Qibla calculations rely on high-precision astronomical mathematical algorithms. Minor variances may occur due to local magnetic interference or regional calculation conventions. We recommend cross-referencing with your local Masjid schedule.</li>
-        </ul>
-
-        <div class="contact-box">
-            <h2>7. Contact & Data Protection Officer</h2>
-            <p>If you have questions, concerns, or privacy requests regarding your data, contact us directly:</p>
-            <p><strong>Lead Developer:</strong> Muhammad Waqas<br>
-            <strong>Email:</strong> <a href="mailto:muhammadwaqas880850@gmail.com">muhammadwaqas880850@gmail.com</a><br>
-            <strong>Response Time:</strong> We aim to respond to all privacy inquiries within 48 business hours.</p>
+    <!-- Sticky Table of Contents Navigation -->
+    <nav class="sticky-nav">
+        <div class="nav-container">
+            <a href="#preamble" class="nav-link">Preamble</a>
+            <a href="#data-collection" class="nav-link">1. Data Collection</a>
+            <a href="#permissions" class="nav-link">2. System Permissions</a>
+            <a href="#data-matrix" class="nav-link">3. Data Safety Matrix</a>
+            <a href="#third-parties" class="nav-link">4. Third-Party Integrations</a>
+            <a href="#account-deletion" class="nav-link">5. Account & Data Deletion</a>
+            <a href="#coppa" class="nav-link">6. Children & Family</a>
+            <a href="#terms-of-service" class="nav-link">7. Terms of Service</a>
+            <a href="#contact" class="nav-link">8. Contact & Legal</a>
         </div>
+    </nav>
 
-        <footer>
-            &copy; 2026 Quran Academy (نُورُ الْقُرْآنِ). All rights reserved.
-        </footer>
-    </div>
+    <!-- Main Container -->
+    <main class="main-content">
+
+        <!-- Executive Commitment Preamble -->
+        <article class="content-card" id="preamble">
+            <div class="section-header">
+                <div class="section-number">§</div>
+                <h2 class="section-title">Institutional Statement of Privacy & Reverence</h2>
+            </div>
+            <div class="callout green">
+                <div class="callout-icon">🛡️</div>
+                <div>
+                    <strong>Core Privacy Mandate:</strong> Quran Academy operates with absolute transparency. We handle digital user privacy with the same sacred reverence we accord to the Holy Quran. We do not monetize personal data, harvest biometrics, or sell tracking profiles to data brokers. This document represents a legally binding covenant between the engineering team and our global community of users.
+                </div>
+            </div>
+            <p>
+                This Comprehensive Legal Specification applies to the Android application <strong>Quran Academy (نُورُ الْقُرْآنِ)</strong>, published and maintained under the leadership of software engineer <strong>Muhammad Waqas</strong>. It establishes our regulatory compliance protocols in accordance with the <strong>Google Play Developer Distribution Agreement</strong>, <strong>Google Play User Data Policies</strong>, the European Union <strong>General Data Protection Regulation (GDPR)</strong>, the <strong>California Consumer Privacy Act (CCPA/CPRA)</strong>, and international privacy treaties.
+            </p>
+            <p>
+                By downloading, accessing, or continuing to use Quran Academy, you acknowledge and agree to the data handling, security parameters, and contractual terms outlined herein.
+            </p>
+        </article>
+
+        <!-- Section 1: Detailed Data Collection & Processing -->
+        <article class="content-card" id="data-collection">
+            <div class="section-header">
+                <div class="section-number">1</div>
+                <h2 class="section-title">Technical Data Collection & Processing Logic</h2>
+            </div>
+            <p>
+                Our architectural blueprint strictly enforces <strong>Data Minimization</strong>. We collect and process only the minimal technical data categories required to deliver authentic Islamic services:
+            </p>
+
+            <h3 class="subsection-title">1.1 Geographic & Spatial Telemetry (GPS / Network Coordinates)</h3>
+            <p>
+                <strong>Operational Purpose:</strong> Accurate calculation of astronomical Islamic prayer times (Fajr, Sunrise, Dhuhr, Asr, Maghrib, Isha) is strictly dependent upon the user's exact geographical latitude, longitude, and elevation relative to the solar zenith. Furthermore, calculating the precise spherical trigonometric vector toward the Holy Kaaba in Makkah al-Mukarramah requires device spatial coordinates.
+            </p>
+            <div class="callout gold">
+                <div class="callout-icon">📍</div>
+                <div>
+                    <strong>Zero-Exfiltration Guarantee:</strong> Geographic coordinates acquired via Android Location Services are evaluated <em>entirely on-device</em> in volatile RAM. Coordinates are <strong>never</strong> transmitted to our servers, logged to analytics backends, or shared with third parties. Once prayer schedules and Qibla bearings are computed, transient coordinates are purged.
+                </div>
+            </div>
+
+            <h3 class="subsection-title">1.2 Acoustic Input & Speech Recognition</h3>
+            <p>
+                <strong>Operational Purpose:</strong> To provide accessible, hands-free Quranic discovery, users may search for specific Ayahs or Surahs using voice input.
+            </p>
+            <p>
+                <strong>Processing Mechanism:</strong> Audio streams captured by the device microphone are routed through the native Android system <code>SpeechRecognizer</code> API. Voice bytes are analyzed ephemerally in device memory to convert speech into text search queries. Audio waveforms are <strong>never recorded, stored on persistent disk, or uploaded</strong> to external voice intelligence databases.
+            </p>
+
+            <h3 class="subsection-title">1.3 User Identity & Cloud Synchronization (Optional)</h3>
+            <p>
+                <strong>Guest-First Philosophy:</strong> Quran Academy does not require registration. Users can recite the full Quran, listen to audio recitations, read Hadith, and utilize prayer calculators with 100% functionality without creating an account.
+            </p>
+            <p>
+                <strong>Optional Cloud Sync:</strong> Should a user voluntarily authenticate using Google Sign-In, we store only their validated Google Display Name, Email Address, and an opaque Firebase User ID (UID). This identity is utilized solely as a cryptographic partition to synchronize personal reading bookmarks, Khatam progress, and favorite supplications across multiple personal devices via Google Cloud Firestore.
+            </p>
+
+            <h3 class="subsection-title">1.4 Local Storage & Diagnostics</h3>
+            <p>
+                Device preferences (such as selected Qari, Arabic script type, custom calculation juristic methods, and Tasbeeh counters) are stored locally in private, sandboxed Android Room Database and DataStore tables.
+            </p>
+        </article>
+
+        <!-- Section 2: Android System Permissions & Foreground Services -->
+        <article class="content-card" id="permissions">
+            <div class="section-header">
+                <div class="section-number">2</div>
+                <h2 class="section-title">Android System Permissions & Foreground Services</h2>
+            </div>
+            <p>
+                In strict adherence to Google Play's 2026 Foreground Service Policies, Quran Academy restricts its manifest declarations to essential runtime capabilities:
+            </p>
+
+            <ul>
+                <li>
+                    <strong>FOREGROUND_SERVICE_MEDIA_PLAYBACK:</strong>
+                    Declared specifically to sustain uninterrupted Quran audio recitations via the <code>AndroidX Media3 ExoPlayer</code> engine. When a user minimizes the application or locks their device, this service ensures seamless continuous recitation, maintaining an ongoing system media notification with interactive playback controls (Play, Pause, Next Ayah).
+                </li>
+                <li>
+                    <strong>POST_NOTIFICATIONS (Android 13+):</strong>
+                    Requested at runtime to deliver user-configured Azaan alerts at exact prayer intervals and daily morning/evening remembrance reminders. Users maintain complete granular control to toggle or mute notification categories at any time.
+                </li>
+                <li>
+                    <strong>ACCESS_FINE_LOCATION & ACCESS_COARSE_LOCATION:</strong>
+                    Requested with a runtime disclosure modal to derive the Qibla azimuth and astronomical twilight intervals. An IP-based offline approximation is provided as a seamless fallback if location permissions are declined.
+                </li>
+                <li>
+                    <strong>RECORD_AUDIO:</strong>
+                    Activated exclusively when the user interacts with the voice search button. Used transiently for speech-to-text processing and immediately deactivated upon query completion.
+                </li>
+                <li>
+                    <strong>WAKE_LOCK:</strong>
+                    Utilized during active Quran recitation and Azaan playback to prevent the Android OS from sleeping the audio decoding pipeline during screen-off intervals.
+                </li>
+            </ul>
+        </article>
+
+        <!-- Section 3: Data Safety Matrix -->
+        <article class="content-card" id="data-matrix">
+            <div class="section-header">
+                <div class="section-number">3</div>
+                <h2 class="section-title">Official Google Play Data Safety Matrix</h2>
+            </div>
+            <p>
+                The following disclosure table mirrors the precise technical declarations submitted to the <strong>Google Play Console Data Safety</strong> review team:
+            </p>
+
+            <div class="table-responsive">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Data Category</th>
+                            <th>Data Types</th>
+                            <th>Collection Purpose</th>
+                            <th>Storage & Retention</th>
+                            <th>Third-Party Sharing</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Location</strong></td>
+                            <td>Approximate & Precise GPS Coordinates</td>
+                            <td>Astronomical prayer times & Qibla compass bearing</td>
+                            <td><span class="tag tag-ephemeral">Ephemeral</span> In-memory calculation; zero disk storage</td>
+                            <td><span class="tag tag-no-share">No Sharing</span> Kept strictly on device</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Personal Information</strong></td>
+                            <td>Display Name, Email Address, User ID</td>
+                            <td>Account authentication & cross-device bookmark sync</td>
+                            <td><span class="tag tag-encrypted">Encrypted</span> Retained in Firebase Firestore until account deletion</td>
+                            <td><span class="tag tag-no-share">No Sharing</span> Never sold or shared</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Audio Files</strong></td>
+                            <td>Microphone audio stream</td>
+                            <td>Voice search for Surahs, Verses, and Duas</td>
+                            <td><span class="tag tag-ephemeral">Ephemeral</span> Discarded immediately after text transcription</td>
+                            <td><span class="tag tag-no-share">No Sharing</span> Processed locally via OS API</td>
+                        </tr>
+                        <tr>
+                            <td><strong>App Activity</strong></td>
+                            <td>Bookmarks, Reading History, Tasbeeh Counts</td>
+                            <td>User personalization and reading progress continuity</td>
+                            <td><span class="tag tag-local">Local DB</span> Stored locally in Room DB; optional Firestore sync</td>
+                            <td><span class="tag tag-no-share">No Sharing</span> Private to authenticated user</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Device & Ad IDs</strong></td>
+                            <td>Android Advertising ID (AAID), Crash Logs</td>
+                            <td>Fraud prevention and family-safe banner ad delivery</td>
+                            <td><span class="tag tag-encrypted">Encrypted</span> Handled securely via Google Mobile Ads SDK</td>
+                            <td>Shared with Google AdMob for ad delivery & analytics</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Network Security</strong></td>
+                            <td>All transmissions</td>
+                            <td>Data transmission protection</td>
+                            <td><span class="tag tag-encrypted">TLS 1.3 / HTTPS</span> End-to-end encryption in transit</td>
+                            <td>Secured across Google Cloud Infrastructure</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </article>
+
+        <!-- Section 4: Third-Party Infrastructure -->
+        <article class="content-card" id="third-parties">
+            <div class="section-header">
+                <div class="section-number">4</div>
+                <h2 class="section-title">Third-Party Service Providers & Sub-Processors</h2>
+            </div>
+            <p>
+                To maintain high-availability infrastructure, secure authentication, and global audio content delivery, Quran Academy interfaces with vetted third-party technologies:
+            </p>
+
+            <ul>
+                <li>
+                    <strong>Google Mobile Ads (AdMob):</strong>
+                    Used to display family-friendly advertisements that cover server hosting, audio CDN bandwidth, and engineering maintenance costs. AdMob may process your device's Android Advertising ID (AAID) to serve contextually relevant ads and prevent click fraud.
+                    <br><em>Opt-Out Guidance:</em> Users can reset their Advertising ID or disable ad personalization at any time through their Android system settings: <strong>Settings &gt; Google &gt; Ads &gt; Reset or Delete Advertising ID</strong>.
+                </li>
+                <li>
+                    <strong>Google Firebase (Authentication, Cloud Firestore, Cloud Storage):</strong>
+                    Provides enterprise-grade cloud synchronization for user bookmarks and profiles. Data stored in Google Cloud is protected by AES-256 rest encryption and TLS 1.3 transit encryption.
+                </li>
+                <li>
+                    <strong>Google Gemini AI API:</strong>
+                    Powers the in-app Islamic Knowledge Assistant. Natural language queries sent to Gemini endpoints are completely decoupled from user emails and device identifiers. Inquiries are processed statelessly without retaining personal behavioral profiles.
+                </li>
+                <li>
+                    <strong>EveryAyah & Islamic Network CDN:</strong>
+                    Quranic audio recitations are streamed directly from globally authenticated, open-source Islamic content delivery networks via encrypted HTTPS connections.
+                </li>
+            </ul>
+        </article>
+
+        <!-- Section 5: Account & Data Deletion Portal -->
+        <article class="content-card" id="account-deletion">
+            <div class="section-header">
+                <div class="section-number">5</div>
+                <h2 class="section-title">User Autonomy, Data Portability & Account Deletion</h2>
+            </div>
+            <p>
+                In strict compliance with <strong>Google Play's Account Deletion Policy</strong> and GDPR Article 17 ("Right to be Forgotten"), we provide frictionless, self-service account and data deletion mechanisms:
+            </p>
+
+            <div class="deletion-steps">
+                <div class="step-card">
+                    <div class="step-badge">1</div>
+                    <h4>In-App Self Service</h4>
+                    <p>Open Quran Academy &gt; Navigate to <strong>Settings</strong> &gt; Select <strong>Account & Data Deletion</strong>.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-badge">2</div>
+                    <h4>Transparent Confirmation</h4>
+                    <p>Review the detailed modal highlighting all profile records, bookmarks, and synced cloud data subject to deletion.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-badge">3</div>
+                    <h4>Permanent Purge</h4>
+                    <p>Confirm deletion. Our system immediately purges your Firebase Auth account, wipes Firestore documents, and resets local caches.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-badge">4</div>
+                    <h4>Web Request Portal</h4>
+                    <p>If the app is uninstalled, email <a href="mailto:muhammadwaqas880850@gmail.com">muhammadwaqas880850@gmail.com</a> to request a full server-side purge within 48 hours.</p>
+                </div>
+            </div>
+
+            <div class="callout green">
+                <div class="callout-icon">⚡</div>
+                <div>
+                    <strong>Permanent Deletion Scope:</strong> Account deletion is absolute and irreversible. It destroys: (a) Your Firebase Authentication account; (b) All synchronized Quran bookmarks and Khatam milestones in Cloud Firestore; (c) All local app database cache tables. No shadow copies or marketing identifiers are retained.
+                </div>
+            </div>
+        </article>
+
+        <!-- Section 6: Children & Families Policy -->
+        <article class="content-card" id="coppa">
+            <div class="section-header">
+                <div class="section-number">6</div>
+                <h2 class="section-title">Children’s Privacy & Families Policy Compliance</h2>
+            </div>
+            <p>
+                Quran Academy is engineered as a universal educational and spiritual resource suitable for Muslims and learners of all ages, including children learning Arabic recitation and Quranic memorization:
+            </p>
+            <ul>
+                <li>
+                    <strong>COPPA Compliance:</strong> We do not knowingly solicit, harvest, or store personal information from children under the age of 13 without verifiable parental consent.
+                </li>
+                <li>
+                    <strong>Google Play Families Policy Alignment:</strong> All advertising inventories rendered through Google AdMob are filtered to exclude sensitive commercial categories (such as gambling, alcohol, mature content, dating, or weapon promotions), ensuring a clean, family-friendly learning environment.
+                </li>
+            </ul>
+        </article>
+
+        <!-- Section 7: Terms of Service -->
+        <article class="content-card" id="terms-of-service">
+            <div class="section-header">
+                <div class="section-number">7</div>
+                <h2 class="section-title">Terms of Service & Usage Governance</h2>
+            </div>
+            <p>
+                These Terms of Service constitute a legally enforceable agreement between the user and the Quran Academy development team led by Muhammad Waqas:
+            </p>
+
+            <h3 class="subsection-title">7.1 Grant of Personal License</h3>
+            <p>
+                We grant you a non-exclusive, non-transferable, revocable license to utilize Quran Academy strictly for personal, non-commercial religious study, educational research, and spiritual contemplation.
+            </p>
+
+            <h3 class="subsection-title">7.2 Intellectual Property & Theological Text Integrity</h3>
+            <p>
+                The Arabic Quranic scripture embedded within the application is sourced from authenticated, globally verified digital repositories (including the Tanzil Project and King Fahd Glorious Quran Printing Complex). The application software architecture, UI layout, custom vector artwork, algorithmic prayer calculations, and AI prompt engineering are protected by copyright laws. You may not decompile, reverse-engineer, clone, or redistribute the proprietary software compilation without prior written authorization.
+            </p>
+
+            <h3 class="subsection-title">7.3 Astronomical & AI Disclaimers</h3>
+            <ul>
+                <li>
+                    <strong>Prayer Times & Qibla Direction:</strong> Computed using high-precision astronomical algorithms and device magnetometer sensors. Minor deviations may occur due to local magnetic interference, urban building density, or twilight calculation conventions. We recommend cross-referencing with your local Masjid schedule.
+                </li>
+                <li>
+                    <strong>AI Islamic Assistant Advisory:</strong> The in-app Islamic Q&A feature utilizes Google Gemini to provide educational research references from classical texts. <strong>AI responses do not constitute formal legal Islamic verdicts (Fatwa).</strong> For binding religious determinations, users must consult certified, qualified Islamic scholars.
+                </li>
+                <li>
+                    <strong>Spiritual Supplications (Duas & Ruqyah):</strong> Spiritual supplications represent authentic traditions from the Quran and Sunnah and are complementary spiritual aids. They are not intended as clinical medical advice or substitutes for qualified healthcare.
+                </li>
+            </ul>
+
+            <h3 class="subsection-title">7.4 Limitation of Liability</h3>
+            <p>
+                Quran Academy is provided on an "AS-IS" and "AS-AVAILABLE" basis without warranties of any kind, whether express or implied. Under no circumstances shall the developer (Muhammad Waqas) or project contributors be liable for indirect, incidental, or consequential damages arising out of your use or inability to use the software.
+            </p>
+        </article>
+
+        <!-- Section 8: Legal Contact & Redressal -->
+        <article class="content-card" id="contact">
+            <div class="section-header">
+                <div class="section-number">8</div>
+                <h2 class="section-title">Legal Contact & Data Protection Officer</h2>
+            </div>
+            <p>
+                For questions regarding this Legal Specification, formal GDPR/CCPA data requests, or compliance inquiries, contact our engineering office directly:
+            </p>
+
+            <div class="contact-grid">
+                <div class="contact-box">
+                    <h4>Lead Engineering Office</h4>
+                    <p><strong>Lead Developer:</strong> Muhammad Waqas</p>
+                    <p><strong>Project:</strong> Quran Academy (نُورُ الْقُرْآنِ)</p>
+                    <p><strong>Direct Email:</strong> <a href="mailto:muhammadwaqas880850@gmail.com">muhammadwaqas880850@gmail.com</a></p>
+                </div>
+                <div class="contact-box">
+                    <h4>Institutional Guarantees</h4>
+                    <p><strong>Response SLA:</strong> Within 48 business hours</p>
+                    <p><strong>Data Requests:</strong> Export or deletion processed immediately</p>
+                    <p><strong>Host Verification:</strong> Verified GitHub Pages Deployment</p>
+                </div>
+            </div>
+        </article>
+
+    </main>
+
+    <!-- Institutional Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-logo">Quran Academy • نُورُ الْقُرْآنِ</div>
+            <p class="footer-copy">
+                &copy; 2026 Quran Academy. Maintained by Muhammad Waqas. All rights reserved.<br>
+                Dedicated to the preservation of sacred Quranic knowledge and user privacy across the globe.
+            </p>
+            <div class="footer-links">
+                <a href="#preamble">Preamble</a>
+                <a href="#data-collection">Data Collection</a>
+                <a href="#data-matrix">Data Safety Matrix</a>
+                <a href="#account-deletion">Account Deletion</a>
+                <a href="#terms-of-service">Terms of Service</a>
+                <a href="mailto:muhammadwaqas880850@gmail.com">Legal Support</a>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>
